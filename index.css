@@ -12,7 +12,10 @@
     background-color: #627C75;
     color: white;
 }
-body{
-    background-color:#627C75;
-  }
-
+#buttonCardGroup{
+    background-color:#5C4E4E;
+    border: 0px;
+}
+#cardGroupImage{
+    height: 50%;
+}
