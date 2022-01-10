@@ -4,6 +4,6 @@
     "\\website",
     "\\website\\templates"
   ],
-  "SelectedNode": "\\website\\templates\\login.html",
+  "SelectedNode": "\\website\\auth.py",
   "PreviewInSolutionExplorer": false
 }
