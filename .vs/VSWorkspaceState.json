@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\website",
-    "\\website\\templates"
+    "\\website"
   ],
-  "SelectedNode": "\\website\\auth.py",
+  "SelectedNode": "\\website\\functions.py",
   "PreviewInSolutionExplorer": false
 }
