@@ -110,20 +110,20 @@
     <body class="text-center">
         <div class="container-fluid">
             <main class="form-signin">
-                <form method="get">
+                <form method="POST">
                     <img class="mb-4" src="../static/logo.png" alt="logo" width="180" height="180" style="margin-top: 6.5em; ">
                     <h1 class="h3 mb-3 fw-normal" style="color: white;">Log In</h1>
                     <!--USERNAME & PASS-->
                     <div class="container-fluid" id='containerCenter'>
                         <div class="form-floating" style="color: white;">
-                            <input type="email" class="form-control" id="floatingEmail" placeholder="name@exemple.com" style="margin-bottom: 2em; color: white; background-color: #0C2D48; width: 60em;">
+                            <input type="email" class="form-control" id="floatingEmail" name="floatingEmail" placeholder="name@exemple.com" style="margin-bottom: 2em; color: white; background-color: #0C2D48; width: 60em;">
                             <label for="floatingEmail">Email address</label>
                         </div>
                     </div>
 
                     <div class="container-fluid" id='containerCenter'>
                         <div class="form-floating" style="color: white;">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" style="margin-bottom: 1em; background-color: #0C2D48; color: white; width: 60em;">
+                            <input type="password" class="form-control" id="floatingPassword" name="floatingPassword" placeholder="Password" style="margin-bottom: 1em; background-color: #0C2D48; color: white; width: 60em;">
                             <label for="floatingPassword">Password</label>
                         </div>
     

@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect
 
 auth = Blueprint('auth',__name__)
 from website.functions import get_db_conn, db, create_user, get_user_credentials, get_user_profile_info
