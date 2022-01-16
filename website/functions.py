@@ -34,3 +34,12 @@ def get_user_credentials(conn, email):
         return user[0]
     else:
         return user
+
+def get_user_profile_info(conn, email):
+    query = f"""SELECT Email, Password, Username, Age FROM Users WHERE Email='{email}'"""
+    cursor = conn.cursor()
+    user = list(cursor.execute(query))
+    if user:
+        return user[0]
+    else:
+        return user
