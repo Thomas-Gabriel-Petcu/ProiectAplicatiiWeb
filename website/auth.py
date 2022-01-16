@@ -1,28 +1,24 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request
+
 auth = Blueprint('auth',__name__)
 from website.functions import get_db_conn, db, create_user, get_user_credentials, get_user_profile_info
 
 @auth.route('/signup', methods=['GET','POST'])
 def signup():
     if request.method == 'POST':
-        try:
-            #reference to request.form
-            form = request.form
-            #get database connection
-            conn = get_db_conn(db)
-            #pass form and connection as parameter to function for creating user
-            if form.get("password1") == form.get("password2"):
-                create_user(conn, form)
-            #close database connection
-            conn.close()
-        except Exception as e:
-            error = {
-                "error": f"Failed to create user. {e}"
-            }
-            return error
+        username = request.form.get('floatingUsername')
+        email = request.form.get('floatingEmail')
+        password1 = request.form.get('floatingPassword1')
+        password2 = request.form.get('floatingPassword2')
+
+        if len(username) <2:
+            print("Username was too short")
+        elif password1 != password2:
+            print("passwords did not match")
+        else:
+            print("Added user to database")
+
     return render_template("signup.html")
-
-
 
 @auth.route('/signin', methods=['GET','POST'])
 def signin():
@@ -58,5 +54,3 @@ def profile(email=None):
 @auth.route('/signout', methods=['GET','POST'])
 def signout():
     return "<p>signout</p>"
-
-
