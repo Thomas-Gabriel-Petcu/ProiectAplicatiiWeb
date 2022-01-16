@@ -5,7 +5,7 @@
 body {
     background-image:
     linear-gradient( rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
-    url(/website/static/image5.jpg);
+    url(/ProiectAplicatiiWeb/website/static/image5.jpg);
     background-size: cover;
     color:black;
     padding: 20px;
