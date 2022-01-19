@@ -2,3 +2,8 @@
 #cardGroupImage{
     height: 50%;
 }
+
+#containerCenter{
+    display:flex;
+    justify-content: center;
+}
