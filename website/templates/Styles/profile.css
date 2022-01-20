@@ -7,3 +7,20 @@
     display:flex;
     justify-content: center;
 }
+#infoBox1{
+    background-color:#E2AD84;
+}
+#infoBox2{
+    background-color: #5C4E4E;
+}
+#infoBox3{
+    background-color: #A8585E;
+}
+.card-body{
+    background-color: #627C75;
+    color: white;
+}
+#buttonCardGroup{
+    background-color:#5C4E4E;
+    border: 0px;
+}
