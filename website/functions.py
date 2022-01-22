@@ -7,19 +7,27 @@ def get_db_conn(path_to_db):
     return conn
 
 def create_user(conn, form):
-    query = """INSERT INTO Users (Username, Email, Password)
-    values (?,?,?)"""
+    query = """INSERT INTO Users (Username, Email, Password, Weight, Height, Age)
+    values (?,?,?,?,?,?)"""
 
     user_info = [
     form.get('floatingUsername'),
     form.get('floatingEmail'),
     form.get('floatingPassword1'),
+    form.get('floatingWeight'),
+    form.get('floatingHeight'),
+    form.get('floatingAge')
     ]
+    for x in user_info:
+        if x == "":
+            raise Exception(f"User information is missing {x}")
 
-    if user_info[0] == "" or user_info[1] == "" or user_info[2] == "":
-        raise Exception("User information is missing.")
-    elif len(user_info[0]) < 2:
+    if len(user_info[0]) < 2:
         raise Exception("Username too short")
+    elif user_info[3] == 0:
+        raise Exception("Weight cannot be 0")
+    elif int(user_info[5]) < 14:
+        raise Exception("Must be at least 14 years old to user services")
     else:
         print("Added user to database")
         cursor = conn.cursor()
@@ -36,7 +44,7 @@ def get_user_credentials(conn, email):
         return user
 
 def get_user_profile_info(conn, email):
-    query = f"""SELECT Email, Password, Username, Age FROM Users WHERE Email='{email}'"""
+    query = f"""SELECT Email, Password, Username, Weight, Height, Age FROM Users WHERE Email='{email}'"""
     cursor = conn.cursor()
     user = list(cursor.execute(query))
     if user:
