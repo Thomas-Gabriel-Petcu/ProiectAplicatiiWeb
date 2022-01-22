@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Databases"
+    "\\Databases",
+    "\\website",
+    "\\website\\static",
+    "\\website\\templates"
   ],
-  "SelectedNode": "\\website",
+  "SelectedNode": "\\main.py",
   "PreviewInSolutionExplorer": false
 }
